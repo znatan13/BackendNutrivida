@@ -1,0 +1,27 @@
+CREATE TABLE usuarios (
+    id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL,
+    correo VARCHAR(150) NOT NULL UNIQUE,
+    contrasenia VARCHAR(255) NOT NULL,
+    rol VARCHAR(20) NOT NULL
+);
+
+CREATE TABLE trabajadores (
+    id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(120) NOT NULL,
+    imagen VARCHAR(500),
+    especialidad VARCHAR(180) NOT NULL,
+    dias_horario VARCHAR(180) NOT NULL,
+    horario VARCHAR(80) NOT NULL
+);
+
+CREATE TABLE servicios (
+    id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    tipo VARCHAR(30) NOT NULL,
+    nombre VARCHAR(150) NOT NULL,
+    descripcion VARCHAR(1000) NOT NULL,
+    duracion VARCHAR(80) NOT NULL,
+    modalidad VARCHAR(80) NOT NULL,
+    profesional VARCHAR(120) NOT NULL,
+    precio DECIMAL(10,2) NOT NULL
+);
